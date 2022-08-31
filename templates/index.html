@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SIMON</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="https://user-images.githubusercontent.com/112404274/187505747-6f70aa27-c72f-450c-838c-11033c4e7cfe.png>
+        <br>
+        <form action ="greet" method="post">
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name ="name_input">
+            <br>
+            <input type="submit" value="GREET" id="greet">
+        </form>
+    </body>    
+</html>
